@@ -666,7 +666,7 @@ canvas {
 .service-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 25px;
   background: transparent;
   border: none;
 }
@@ -1317,7 +1317,7 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   /* ── Service Cards ── */
   .service-cards {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 32px;
     background: transparent;
     border: none;
     max-width: 600px;
@@ -1413,7 +1413,7 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
 
   .service-cards {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 30px;
     max-width: 100%;
   }
   .service-card--featured { grid-column: auto; }
