@@ -1288,9 +1288,10 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   .nav-toggle { display: flex; }
   .mobile-nav { display: flex; }
 
-  .hero-line--desire .hc   { font-size: clamp(4.5rem, 15vw, 8rem); }
-  .hero-line--security .hc { font-size: clamp(3.5rem, 12vw, 6.5rem); }
-  .hero-line--sub .hc      { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.22em; }
+  .hero-standalone { justify-content: center; padding-left: 0; padding-top: calc(var(--header-h) + 24vh); align-items: flex-start; }
+  .hero-line--desire .hc   { font-size: clamp(5.5rem, 20vw, 9rem); }
+  .hero-line--security .hc { font-size: clamp(4.2rem, 15vw, 7.5rem); }
+  .hero-line--sub .hc      { font-size: clamp(3.2rem, 11vw, 6rem); letter-spacing: 0.22em; }
   .hero-line--sub .hc:last-child { letter-spacing: 0; }
   .hc-drop { display: none; }
 
@@ -1416,9 +1417,9 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
 }
 
 @media (max-width: 480px) {
-  .hero-line--desire .hc   { font-size: clamp(3.8rem, 18vw, 7rem); }
-  .hero-line--security .hc { font-size: clamp(3rem, 14vw, 5.5rem); }
-  .hero-line--sub .hc      { font-size: clamp(2rem, 7.5vw, 3.5rem); letter-spacing: 0.14em; }
+  .hero-line--desire .hc   { font-size: clamp(4.5rem, 20vw, 7rem); }
+  .hero-line--security .hc { font-size: clamp(3.5rem, 16vw, 5.5rem); }
+  .hero-line--sub .hc      { font-size: clamp(2.6rem, 11vw, 4rem); letter-spacing: 0.14em; }
   .hero-line--sub .hc:last-child { letter-spacing: 0; }
   .canvas-edge--left, .canvas-edge--right { width: 40px; }
   .canvas-edge--top, .canvas-edge--bottom { height: 100px; }
