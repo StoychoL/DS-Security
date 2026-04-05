@@ -1287,7 +1287,7 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   .hero-line--sub .hc:last-child { letter-spacing: 0; }
   .hc-drop { display: none; }
 
-  #scroll-container { height: 1000vh; }
+  #scroll-container { height: 880vh; }
 
   .align-left, .align-right {
     padding: 0 6vw;
