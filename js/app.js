@@ -181,8 +181,8 @@
         heroSection.style.opacity = heroOpacity;
 
         // Canvas circle-wipe expands
-        const wipeProgress = Math.min(1, Math.max(0, (p - 0.005) / 0.07));
-        const radius = wipeProgress * 80;
+        const wipeProgress = Math.min(1, Math.max(0, p / 0.04));
+        const radius = wipeProgress * 110;
         canvasWrap.style.clipPath = `circle(${radius}% at 50% 50%)`;
 
         // Canvas fades out after Revolution of Quality section, before Services (67%–75% scroll)
