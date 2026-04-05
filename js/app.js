@@ -97,9 +97,6 @@
     ctx.drawImage(img, dx, dy, dw, dh);
   }
 
-  /* ─── MOBILE DETECTION ─── */
-  const isMobile = window.innerWidth <= 768;
-
   /* ══════════════════════════════════════════════════════
      FRAME PRELOADER — 2-phase: first 10 fast, rest bg
      On mobile: skip canvas entirely for fast load
@@ -126,17 +123,6 @@
   }
 
   async function preloadFrames() {
-    if (isMobile) {
-      // On mobile: skip all frame loading, hide canvas, go straight to content
-      if (canvasWrap) canvasWrap.style.display = "none";
-      loaderBar.style.width = "100%";
-      loaderPercent.textContent = "100%";
-      isReady = true;
-      loader.classList.add("hidden");
-      initAnimations();
-      return;
-    }
-
     // Phase 1: load first 10 frames immediately
     const firstBatch = [];
     for (let i = 0; i < Math.min(10, FRAME_COUNT); i++) {
@@ -485,10 +471,8 @@
     initLenis();
 
     initHeroReveal();
-    if (!isMobile) {
-      initHeroTransition();
-      initFrameScrub();
-    }
+    initHeroTransition();
+    initFrameScrub();
     initHeader();
     initMobileNav();
 
