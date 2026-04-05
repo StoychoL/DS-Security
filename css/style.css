@@ -1142,10 +1142,11 @@ canvas {
   .nav-toggle { display: flex; }
   .mobile-nav { display: flex; }
 
-  .hero-line--desire .hc   { font-size: clamp(3.5rem, 13vw, 7rem); }
-  .hero-line--security .hc { font-size: clamp(2.8rem, 10vw, 5.5rem); }
-  .hero-line--sub .hc      { font-size: clamp(2rem, 6.5vw, 4rem); }
-  .hc-drop { font-size: 0.48rem; }
+  .hero-line--desire .hc   { font-size: clamp(4.5rem, 15vw, 8rem); }
+  .hero-line--security .hc { font-size: clamp(3.5rem, 12vw, 6.5rem); }
+  .hero-line--sub .hc      { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.22em; }
+  .hero-line--sub .hc:last-child { letter-spacing: 0; }
+  .hc-drop { display: none; }
 
   #scroll-container { height: 800vh; }
 
@@ -1196,6 +1197,8 @@ canvas {
   .rev-feature:nth-child(n+4) { border-top: 1px solid var(--border); }
 
   .tailored-section { padding: 72px 6vw 72px; }
+  .tailored-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .tailored-subtext { max-width: 100%; font-size: 0.9rem; }
   .tailored-cards { grid-template-columns: 1fr; }
   .tailored-card { border-right: none; border-bottom: 1px solid var(--border); padding: 36px 0; }
   .tailored-card:last-child { border-bottom: none; }
@@ -1211,9 +1214,10 @@ canvas {
 }
 
 @media (max-width: 480px) {
-  .hero-line--desire .hc   { font-size: clamp(3rem, 16vw, 6rem); }
-  .hero-line--security .hc { font-size: clamp(2.4rem, 12vw, 5rem); }
-  .hero-line--sub .hc      { font-size: clamp(1.6rem, 6vw, 3rem); }
+  .hero-line--desire .hc   { font-size: clamp(3.8rem, 18vw, 7rem); }
+  .hero-line--security .hc { font-size: clamp(3rem, 14vw, 5.5rem); }
+  .hero-line--sub .hc      { font-size: clamp(2rem, 7.5vw, 3.5rem); letter-spacing: 0.14em; }
+  .hero-line--sub .hc:last-child { letter-spacing: 0; }
   .canvas-edge--left, .canvas-edge--right { width: 40px; }
   .canvas-edge--top, .canvas-edge--bottom { height: 100px; }
 }
