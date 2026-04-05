@@ -1242,24 +1242,33 @@ canvas {
   .tailored-card-icon { margin-bottom: 16px; }
 
   /* ── Contact Form ── */
-  .contact-section { padding: 48px 5vw 60px; overflow-x: hidden; }
+  .contact-section { padding: 34px 5vw 42px; overflow-x: hidden; }
   .contact-inner {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-  .contact-left {
-    position: static;
-    margin-bottom: 0;
+  .contact-left { position: static; }
+  .contact-heading {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    margin: 8px 0 11px;
   }
-  .contact-heading { margin-bottom: 16px; }
-  .contact-subtext { display: block; margin-bottom: 24px; max-width: 100%; }
-  .contact-details { margin-bottom: 28px; }
+  .contact-subtext {
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+  .contact-details { margin-bottom: 20px; }
+  .contact-detail-item { padding: 10px 0; gap: 14px; }
+  .contact-detail-label { font-size: 0.55rem; min-width: 52px; }
+  .contact-detail-value { font-size: 0.75rem; }
   .contact-right { width: 100%; }
   .form-row--2col { grid-template-columns: 1fr; }
-  .form-input { font-size: 16px; }
-  .contact-form { gap: 14px; }
-  .form-submit { width: 100%; justify-content: center; }
+  .form-label { font-size: 0.55rem; }
+  .form-input { font-size: 16px; padding: 9px 11px; }
+  .contact-form { gap: 10px; }
+  .form-submit { width: 100%; justify-content: center; padding: 12px 24px; font-size: 0.62rem; }
 
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
