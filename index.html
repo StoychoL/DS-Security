@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Systems — Professional Home Security</title>
+  <link rel="icon" type="image/png" href="Image/favcon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ LOADER ═══ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <img src="Image/Logo.png" alt="DS Systems" class="loader-logo" />
+      <div class="loader-bar-wrap">
+        <div id="loader-bar"></div>
+      </div>
+      <span id="loader-percent">0%</span>
+    </div>
+  </div>
+
+  <!-- ═══ FIXED HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo">
+        <img src="Image/Logo.png" alt="DS Systems" />
+      </a>
+      <nav class="header-nav">
+        <a href="#contact" class="nav-cta">Enquire Now</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#services" class="mobile-cta">Enquire Now</a>
+  </div>
+
+  <!-- ═══ HERO (cinematic text reveal) ═══ -->
+  <section class="hero-standalone" id="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="hero-eye-line"></span>
+        <span class="hero-eye-text">Professional Home Security</span>
+        <span class="hero-eye-line"></span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-line hero-line--desire">
+          <span class="hc">D</span><span class="hc">e</span><span class="hc">s</span><span class="hc">i</span><span class="hc">r</span><span class="hc">e</span><span class="hc">d</span>
+        </span>
+        <span class="hero-line hero-line--security">
+          <span class="hc">S</span><span class="hc">e</span><span class="hc">c</span><span class="hc">u</span><span class="hc">r</span><span class="hc">i</span><span class="hc">t</span><span class="hc">y</span>
+        </span>
+        <span class="hero-line hero-line--sub">
+          <span class="hc hc-has-drop">S<span class="hc-drop">Save</span></span><span class="hc hc-has-drop">Y<span class="hc-drop">Your</span></span><span class="hc hc-has-drop">S<span class="hc-drop">Self</span></span><span class="hc hc-has-drop">T<span class="hc-drop">Time</span></span><span class="hc hc-has-drop">E<span class="hc-drop">Energy</span></span><span class="hc hc-has-drop">M<span class="hc-drop">Money</span></span><span class="hc hc-has-drop">S<span class="hc-drop">Stress</span></span>
+        </span>
+      </h1>
+      <!-- Gooey morphing service label -->
+      <svg class="gooey-filter-svg" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="gooey-threshold">
+            <feColorMatrix in="SourceGraphic" type="matrix"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+          </filter>
+        </defs>
+      </svg>
+
+      <div id="gooey-text-container" class="gooey-text-wrap">
+        <div class="gooey-text-inner">
+          <span class="gt-text gt-text1"></span>
+          <span class="gt-text gt-text2"></span>
+        </div>
+      </div>
+
+      <p class="hero-tagline">Trusted Security Installations Across the UK</p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span class="scroll-label">SCROLL TO EXPLORE</span>
+      <div class="scroll-arrow">
+        <svg width="14" height="28" viewBox="0 0 14 28" fill="none">
+          <line x1="7" y1="0" x2="7" y2="22" stroke="currentColor" stroke-width="1.5"/>
+          <polyline points="1,16 7,24 13,16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CANVAS (fixed, scroll-driven frames) ═══ -->
+  <div class="canvas-wrap" id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+    <!-- Edge feather overlays -->
+    <div class="canvas-edge canvas-edge--top"></div>
+    <div class="canvas-edge canvas-edge--bottom"></div>
+    <div class="canvas-edge canvas-edge--left"></div>
+    <div class="canvas-edge canvas-edge--right"></div>
+  </div>
+
+  <!-- ═══ DARK OVERLAY ═══ -->
+  <div id="dark-overlay"></div>
+
+<!-- ═══ SCROLL CONTAINER ═══ -->
+  <div id="scroll-container">
+
+    <!-- 001 / CCTV ─ slide-left ─ left-aligned -->
+    <section class="scroll-section section-content align-left"
+             data-enter="8" data-leave="20" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">001 / CCTV SURVEILLANCE</span>
+        <h2 class="section-heading">Total<br/>Surveillance<br/>Coverage</h2>
+        <p class="section-body">Professional-grade 4K systems with intelligent video analytics, night vision, and real-time remote access — so you're always in control.</p>
+        <a href="#services" class="section-link">Explore Systems <span class="link-arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- 002 / ACCESS CONTROL ─ slide-left ─ left-aligned -->
+    <section class="scroll-section section-content align-left"
+             data-enter="22" data-leave="34" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">002 / ACCESS CONTROL</span>
+        <h2 class="section-heading">Smart<br/>Access<br/>Management</h2>
+        <p class="section-body">Biometric readers, card-based entry, and intercom systems professionally installed. Seamless security from the front door inward.</p>
+        <a href="#services" class="section-link">Explore Systems <span class="link-arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- 003 / PERIMETER ─ slide-left ─ left-aligned -->
+    <section class="scroll-section section-content align-left"
+             data-enter="36" data-leave="52" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">003 / PERIMETER SECURITY</span>
+        <h2 class="section-heading">Illuminate<br/>&amp; Protect</h2>
+        <p class="section-body">Advanced perimeter detection combined with integrated flood lighting — motion-triggered, weather-proof, and professionally fitted.</p>
+        <a href="#services" class="section-link">Explore Systems <span class="link-arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- 004 / REVOLUTION OF QUALITY ─ rotate-in ─ left-aligned -->
+    <section class="scroll-section section-content align-left"
+             data-enter="54" data-leave="67" data-animation="rotate-in">
+      <div class="section-inner">
+        <span class="section-label">004 / REVOLUTION OF QUALITY</span>
+        <h2 class="section-heading">Precision<br/>Built<br/>For Life</h2>
+        <p class="section-body">Every installation engineered to military-grade standards — ultra-clear 4K footage, encrypted feeds, and AI-powered alerts protecting you around the clock.</p>
+        <div class="section-tags">
+          <span class="section-tag">4K Ultra HD</span>
+          <span class="section-tag">Remote Access</span>
+          <span class="section-tag">24/7 Recording</span>
+          <span class="section-tag">Encrypted Feeds</span>
+          <span class="section-tag">Smart Alerts</span>
+          <span class="section-tag">Expert Support</span>
+        </div>
+        <a href="#services" class="section-link">Explore Our Standards <span class="link-arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- SERVICES CTA ─ fade-up ─ persist -->
+    <section class="scroll-section section-services" id="services"
+             data-enter="76" data-leave="100" data-animation="fade-up" data-persist="true">
+      <div class="services-inner">
+        <div class="services-header">
+          <div>
+            <span class="section-label services-label">OUR SERVICES</span>
+            <h2 class="services-heading">Choose Your<br/>Protection</h2>
+          </div>
+          <p class="services-subtext">Every installation is tailored to your property. Professional-grade equipment, fitted by certified engineers.</p>
+        </div>
+
+        <div class="service-cards">
+
+          <!-- Card 1: Perimeter -->
+          <div class="service-card">
+            <div class="card-image-wrap">
+              <img src="Image/perimeter and external lighting.jpg"
+                   alt="Perimeter Protection & External Light" class="card-image" />
+              <div class="card-image-overlay"></div>
+              <span class="card-number">01</span>
+              <span class="card-price-badge">From £400</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag-row">
+                <span class="card-tag">POPULAR</span>
+                <span class="card-category">Perimeter</span>
+              </div>
+              <h3 class="card-title">Perimeter Protection &amp; External Lighting</h3>
+              <p class="card-desc">Motion-triggered flood lighting combined with perimeter detection sensors — weather-proof and professionally fitted.</p>
+              <div class="card-features">
+                <span class="card-feature">Motion Detection</span>
+                <span class="card-feature">Weather-Proof</span>
+                <span class="card-feature">LED Flood Lights</span>
+              </div>
+              <div class="card-divider"></div>
+              <a href="#contact" class="card-cta">Enquire Now <span class="link-arrow">→</span></a>
+            </div>
+          </div>
+
+          <!-- Card 2: CCTV (featured) -->
+          <div class="service-card service-card--featured">
+            <div class="card-image-wrap">
+              <img src="Image/ CCTV Video Surveillance System.jpeg"
+                   alt="CCTV Video Surveillance System" class="card-image" />
+              <div class="card-image-overlay"></div>
+              <span class="card-number">02</span>
+              <span class="card-price-badge">From £500</span>
+              <span class="card-featured-label">Most Popular</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag-row">
+                <span class="card-tag card-tag--blue">BEST SELLER</span>
+                <span class="card-category">Surveillance</span>
+              </div>
+              <h3 class="card-title">CCTV Video Surveillance System</h3>
+              <p class="card-desc">Professional-grade 4K cameras with intelligent video analytics, night vision, and real-time remote access from any device.</p>
+              <div class="card-features">
+                <span class="card-feature">4K Resolution</span>
+                <span class="card-feature">Night Vision</span>
+                <span class="card-feature">Remote Access</span>
+              </div>
+              <div class="card-divider"></div>
+              <a href="#contact" class="card-cta card-cta--accent">Enquire Now <span class="link-arrow">→</span></a>
+            </div>
+          </div>
+
+          <!-- Card 3: Access Control -->
+          <div class="service-card">
+            <div class="card-image-wrap">
+              <img src="Image/Access control and Intercoms.jpeg"
+                   alt="Access Control and Intercom" class="card-image" />
+              <div class="card-image-overlay"></div>
+              <span class="card-number">03</span>
+              <span class="card-price-badge">From £990</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag-row">
+                <span class="card-tag card-tag--gold">PREMIUM</span>
+                <span class="card-category">Access Control</span>
+              </div>
+              <h3 class="card-title">Access Control &amp; Intercom</h3>
+              <p class="card-desc">Biometric readers, card-based entry, and video intercom systems — seamless security from the front door inward.</p>
+              <div class="card-features">
+                <span class="card-feature">Biometric</span>
+                <span class="card-feature">Card Entry</span>
+                <span class="card-feature">Video Intercom</span>
+              </div>
+              <div class="card-divider"></div>
+              <a href="#contact" class="card-cta">Enquire Now <span class="link-arrow">→</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /scroll-container -->
+
+  <!-- ═══ TAILORED SOLUTIONS ═══ -->
+  <section class="tailored-section" id="tailored">
+    <div class="tailored-inner">
+
+      <div class="tailored-header">
+        <div>
+          <span class="section-label tailored-label">TAILORED SOLUTIONS</span>
+          <h2 class="tailored-heading">Built Around<br/>Your Property</h2>
+        </div>
+        <p class="tailored-subtext">Whether you're securing a family home or a multi-site commercial premises, every system is designed and installed to your exact requirements by our certified engineers.</p>
+      </div>
+
+      <div class="tailored-cards">
+
+        <!-- Residential CCTV -->
+        <div class="tailored-card">
+          <div class="tailored-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <span class="tailored-card-label">001</span>
+          <h3 class="tailored-card-title">Residential CCTV</h3>
+          <p class="tailored-card-desc">Complete home surveillance packages tailored to your property.</p>
+          <ul class="tailored-features">
+            <li>Up to 8 cameras</li>
+            <li>Night vision</li>
+            <li>Mobile app access</li>
+            <li>Cloud storage</li>
+          </ul>
+          <a href="#contact" class="tailored-cta">Learn More <span class="link-arrow">→</span></a>
+        </div>
+
+        <!-- Commercial CCTV -->
+        <div class="tailored-card">
+          <div class="tailored-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="18" rx="2"/>
+              <path d="M8 3v18M16 3v18M2 9h20M2 15h20"/>
+            </svg>
+          </div>
+          <span class="tailored-card-label">002</span>
+          <h3 class="tailored-card-title">Commercial CCTV</h3>
+          <p class="tailored-card-desc">Scalable systems for businesses, offices, and retail spaces.</p>
+          <ul class="tailored-features">
+            <li>Unlimited cameras</li>
+            <li>License plate recognition</li>
+            <li>Analytics dashboard</li>
+            <li>Multi-site management</li>
+          </ul>
+          <a href="#contact" class="tailored-cta">Learn More <span class="link-arrow">→</span></a>
+        </div>
+
+        <!-- Camera Upgrades -->
+        <div class="tailored-card">
+          <div class="tailored-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 3 21 3 21 8"/>
+              <line x1="4" y1="20" x2="21" y2="3"/>
+              <polyline points="21 16 21 21 16 21"/>
+              <line x1="15" y1="15" x2="21" y2="21"/>
+            </svg>
+          </div>
+          <span class="tailored-card-label">003</span>
+          <h3 class="tailored-card-title">Camera Upgrades</h3>
+          <p class="tailored-card-desc">Upgrade existing systems with the latest 4K and AI-powered cameras.</p>
+          <ul class="tailored-features">
+            <li>4K resolution</li>
+            <li>AI motion detection</li>
+            <li>Two-way audio</li>
+            <li>Weatherproof rating</li>
+          </ul>
+        </div>
+
+        <!-- Maintenance -->
+        <div class="tailored-card">
+          <div class="tailored-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <span class="tailored-card-label">004</span>
+          <h3 class="tailored-card-title">Maintenance</h3>
+          <p class="tailored-card-desc">Ongoing maintenance plans for peak system performance.</p>
+          <ul class="tailored-features">
+            <li>Quarterly inspections</li>
+            <li>Firmware updates</li>
+            <li>Priority repairs</li>
+            <li>24/7 emergency support</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT FORM ═══ -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+
+      <div class="contact-left">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2 class="contact-heading">Request a<br/>Free Survey</h2>
+        <p class="contact-subtext">Our certified engineers will assess your property and recommend the right security solution. No obligation, completely free.</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <span class="contact-detail-label">Phone</span>
+            <a href="tel:+441234567890" class="contact-detail-value">+44 (0) 1234 567 890</a>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-label">Email</span>
+            <a href="mailto:info@dssystems.co.uk" class="contact-detail-value">info@dssystems.co.uk</a>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-label">Coverage</span>
+            <span class="contact-detail-value">Across the United Kingdom</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contact-form-el" novalidate>
+          <div class="form-row form-row--2col">
+            <div class="form-group">
+              <label class="form-label" for="cf-first">First Name</label>
+              <input id="cf-first" type="text" class="form-input" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-last">Last Name</label>
+              <input id="cf-last" type="text" class="form-input" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-email">Email Address</label>
+            <input id="cf-email" type="email" class="form-input" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-phone">Phone Number</label>
+            <input id="cf-phone" type="tel" class="form-input" placeholder="+44 7700 000 000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-service">Service Interested In</label>
+            <select id="cf-service" class="form-input form-select">
+              <option value="" disabled selected>Select a service</option>
+              <option>Perimeter Protection &amp; External Lighting</option>
+              <option>CCTV Video Surveillance System</option>
+              <option>Access Control and Intercom</option>
+              <option>Not sure — I need advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Message</label>
+            <textarea id="cf-message" class="form-input form-textarea" placeholder="Tell us about your property and what you're looking to protect…" rows="4"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry <span class="link-arrow">→</span></button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Image/Logo.png" alt="DS Systems" class="footer-logo" />
+        <p class="footer-tagline">Professional Home Security Installations</p>
+      </div>
+      <div class="footer-contact">
+        <h4 class="footer-contact-title">Get in Touch</h4>
+        <p class="footer-contact-line">
+          <a href="tel:+441234567890">+44 (0) 1234 567 890</a>
+        </p>
+        <p class="footer-contact-line">
+          <a href="mailto:info@dssystems.co.uk">info@dssystems.co.uk</a>
+        </p>
+        <p class="footer-contact-line footer-address">
+          Serving homes across the United Kingdom
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-contact-title">Navigation</h4>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#about" class="footer-link">About Us</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 DS Systems Ltd. All rights reserved.</span>
+      <span>Professional Home Security Specialists</span>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/gooey-text.js"></script>
+</body>
+</html>
