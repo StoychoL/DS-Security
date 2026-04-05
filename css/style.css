@@ -666,15 +666,16 @@ canvas {
 .service-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  gap: 5px;
+  background: transparent;
+  border: none;
 }
 
 /* ─── SERVICE CARD ─── */
 .service-card {
   position: relative;
   background: var(--bg-card);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1041,23 +1042,14 @@ canvas {
 .tailored-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border: 1px solid var(--border);
+  gap: 2px;
 }
 .tailored-card {
   padding: 48px 44px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 0;
-}
-.tailored-card:nth-child(2n) {
-  border-right: none;
-}
-.tailored-card:nth-child(3),
-.tailored-card:nth-child(4) {
-  border-bottom: none;
 }
 .tailored-card-icon {
   color: var(--silver);
@@ -1365,17 +1357,12 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   .tailored-subtext { max-width: 100%; font-size: 0.9rem; }
   .tailored-cards {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid var(--border);
+    gap: 2px;
   }
   .tailored-card {
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
     padding: 28px 20px;
   }
-  .tailored-card:nth-child(2n) { border-right: none; }
-  .tailored-card:nth-child(3),
-  .tailored-card:nth-child(4) { border-bottom: none; }
   .tailored-card-title { font-size: clamp(1.2rem, 4.5vw, 1.8rem); }
   .tailored-card-desc { font-size: 0.82rem; margin-bottom: 20px; }
   .tailored-features { margin-bottom: 24px; gap: 8px; }
@@ -1431,11 +1418,8 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   }
   .service-card--featured { grid-column: auto; }
 
-  .tailored-cards { grid-template-columns: 1fr; }
-  .tailored-card { border-right: none; }
-  .tailored-card:nth-child(2n) { border-right: none; }
-  .tailored-card:nth-child(3),
-  .tailored-card:nth-child(4) { border-bottom: none; }
+  .tailored-cards { grid-template-columns: 1fr; gap: 2px; }
+  .tailored-card { border: 1px solid var(--border); }
 }
 
 /* ─── GOOEY TEXT MORPHING ─── */
