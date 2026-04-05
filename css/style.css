@@ -669,6 +669,7 @@ canvas {
   gap: 25px;
   background: transparent;
   border: none;
+  margin-top: calc(50vh - 15rem);
 }
 
 /* ─── SERVICE CARD ─── */
