@@ -1242,14 +1242,23 @@ canvas {
   .tailored-card-icon { margin-bottom: 16px; }
 
   /* ── Contact Form ── */
-  .contact-section { padding: 60px 5vw 70px; overflow-x: hidden; }
-  .contact-inner { grid-template-columns: 1fr; gap: 20px; }
-  .contact-left { position: static; }
-  .contact-subtext { display: none; }
-  .contact-details { display: none; }
+  .contact-section { padding: 48px 5vw 60px; overflow-x: hidden; }
+  .contact-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-left {
+    position: static;
+    margin-bottom: 0;
+  }
+  .contact-heading { margin-bottom: 16px; }
+  .contact-subtext { display: block; margin-bottom: 24px; max-width: 100%; }
+  .contact-details { margin-bottom: 28px; }
+  .contact-right { width: 100%; }
   .form-row--2col { grid-template-columns: 1fr; }
   .form-input { font-size: 16px; }
-  .contact-form { width: 100%; max-width: 100%; }
+  .contact-form { gap: 14px; }
   .form-submit { width: 100%; justify-content: center; }
 
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
