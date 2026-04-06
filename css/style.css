@@ -1339,7 +1339,7 @@ a.contact-detail-value:hover { color: var(--accent-bright); }
   .services-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 36px; }
   .services-subtext { max-width: 100%; font-size: 0.82rem; }
   .services-inner { max-width: 100%; }
-  .section-services { padding: 72px 5vw 12px; min-height: unset; }
+  .section-services { padding: 72px 5vw 0; min-height: 100vh; }
   .services-heading { font-size: clamp(2.4rem, 10vw, 3.2rem); line-height: 0.92; }
   .services-label { font-size: 0.6rem; letter-spacing: 0.2em; }
   .card-image-wrap { aspect-ratio: 4/3; }
